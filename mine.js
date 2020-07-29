@@ -22,3 +22,25 @@ const placeMines = (row, column, mineField, mines) => {
   }
   return mineField;
 };
+
+const getMines = (x, y, mineField) => {
+  around8 = [[x, y - 1], [x - 1, y - 1], [x - 1, y], [x - 1, y + 1], [x, y + 1], [x + 1, y + 1], [x, y + 1], [x - 1, y + 1]];
+  nMines = 0;
+  around8.forEach(pos => {
+    if (mineField[pos[0]][pos[1]] === 'O') {
+      nMines += 1;
+    }
+  });
+  return nMines;
+};
+
+const placeNumbers = (row, column, mineField) => {
+  while (row) {
+    while (column) {
+      mineField[row - 1][column - 1] = String(getMines(row - 1, column - 1, minefield));
+      column -= 1;
+    }
+    row -= 1;
+  }
+  return mineField;
+};
