@@ -6,8 +6,14 @@ function centerCanvas() {
   cnv.position(x, y);
 }
 
+const ROW = 5;
+const COLUMN = 5;
+const boxSize = 50;
+
 function setup() {
-  cnv = createCanvas(300, 300);
+  const cnvWidth = COLUMN*boxSize;
+  const cnvHeight = ROW*boxSize;
+  cnv = createCanvas(cnvWidth, cnvHeight);
   centerCanvas();
   background(50);
 }
