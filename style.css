@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #000;
+  font-family: 'Ranchers', cursive;
+  font-size: 32px;
+}
+
+canvas {
+  display: block;
+}
