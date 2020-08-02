@@ -44,3 +44,20 @@ const placeNumbers = (row, column, mineField) => {
   }
   return mineField;
 };
+
+const mine = (row, column) => {
+  row,
+  column,
+  createMineField (row, column) => {
+    let mineField = Array(this.row);
+    let mineRow = Array(this.column).fill('');
+    mineField.fill(mineRow);
+    return mineField;
+  };
+}
+
+export {
+  createMineField,
+  placeMines,
+  placeNumbers
+};
